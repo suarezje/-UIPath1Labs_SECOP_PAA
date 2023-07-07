@@ -196,7 +196,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;No se ha cargado la págna de consulta PAA correctamente para la entidad &quot;+rowBase(&quot;ENTIDAD&quot;).ToString()]" />
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName=" Utils\EnvioCorreos.xaml">
+                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="EnvioCorreos.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">[in_Config("019").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">Bot SECOP PAA - Carga página PAA</InArgument>
@@ -764,7 +764,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;No se ha obtenido tabla de resultados para la entidad: &quot;+rowBase(&quot;ENTIDAD&quot;).ToString()]" />
-                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName=" Utils\EnvioCorreos.xaml">
+                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="EnvioCorreos.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">[in_Config("019").ToString]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">Bot SECOP PAA - Fallo consultando detalle PAA</InArgument>
@@ -785,12 +785,20 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;No se ha cargado la págna de consulta PAA correctamente para la consulta de la entidad &quot;+rowBase(&quot;ENTIDAD&quot;).ToString()]" />
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName=" Utils\EnvioCorreos.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="EnvioCorreos.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">[in_Config("019").ToString]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">Bot SECOP PAA - Fallo consultando detalle PAA</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_TextoCorreo">["No se ha cargado la págna de consulta PAA correctamente para la consulta de la entidad "+rowBase("ENTIDAD").ToString()]</InArgument>
-                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">
+                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;019&quot;).ToString" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">
+                                            <Literal x:TypeArguments="x:String">Bot SECOP PAA - Fallo consultando detalle PAA</Literal>
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_TextoCorreo">
+                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;No se ha cargado la págna de consulta PAA correctamente para la consulta de la entidad &quot;+rowBase(&quot;ENTIDAD&quot;).ToString()" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                                          </InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>

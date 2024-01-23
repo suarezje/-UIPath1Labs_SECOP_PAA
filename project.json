@@ -1,5 +1,6 @@
 {
   "name": "ExtraccionDxSECOP_PAA",
+  "projectId": "6219cec5-fb76-42d7-aafc-1dd0ad31ba3d",
   "description": "Proyecto bot para extracción de datos PAA desde el portal SECOP y carga a base de datos",
   "main": "Main.xaml",
   "dependencies": {
@@ -19,16 +20,21 @@
   "projectVersion": "1.0.6",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -41,7 +47,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "arguments": {
     "input": [

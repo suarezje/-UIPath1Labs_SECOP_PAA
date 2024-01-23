@@ -13,41 +13,36 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1003,4965</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1542,6487</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
-      <x:String>System.Globalization</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
-      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
-      <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
       <x:String>UiPath.Credentials.Activities</x:String>
-      <x:String>UiPath.CSV</x:String>
-      <x:String>UiPath.CSV.Activities</x:String>
-      <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Database.Activities</x:String>
-      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>UiPath.Mail.Exchange.Activities</x:String>
       <x:String>UiPath.Mail.IMAP.Activities</x:String>
@@ -56,6 +51,16 @@
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Orchestrator.Client</x:String>
       <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -76,6 +81,7 @@
       <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
@@ -88,19 +94,25 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_UINavegador]" BrowserType="Chrome" DisplayName="Attach Browser 'Buscarpro Page'" sap:VirtualizedContainerService.HintSize="1013,4940" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9604690702f9d3b2539b762b39602624">
+  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_UINavegador]" BrowserType="Chrome" DisplayName="Attach Browser 'Buscarpro Page'" sap:VirtualizedContainerService.HintSize="1552,6422" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9604690702f9d3b2539b762b39602624">
     <ui:BrowserScope.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="979,4794" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1518,6275" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="bExisteCampoBusqueda" />
             <Variable x:TypeArguments="x:Boolean" Name="bExisteTabla" />
@@ -108,13 +120,16 @@
             <Variable x:TypeArguments="s:DateTime" Name="dateFechaConsultaHasta" />
             <Variable x:TypeArguments="s:DateTime" Name="dateFechaConsultaDesde" />
             <Variable x:TypeArguments="scg:List(x:Int32)" Name="arrayIndicesEliminar" />
+            <Variable x:TypeArguments="sd:DataTable" Name="dtDatosExportados" />
+            <Variable x:TypeArguments="sd:DataTable" Name="dtDatosFiltrados" />
+            <Variable x:TypeArguments="x:String" Name="strNombreArchivo" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Asegurar Formulario de Búsqueda Avanzada" sap:VirtualizedContainerService.HintSize="937,583" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence DisplayName="Asegurar Formulario de Búsqueda Avanzada" sap:VirtualizedContainerService.HintSize="1456,634" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bExisteLinkBusqueda" />
             </Sequence.Variables>
@@ -124,7 +139,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteLinkBusqueda]" sap:VirtualizedContainerService.HintSize="621,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+            <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteLinkBusqueda]" sap:VirtualizedContainerService.HintSize="695,107" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c094bd7bc885352cc72e385fad76aa94" Selector="&lt;webctrl aaname='Plan anual de adquisiciones (PAA)' tag='A' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
               </ui:UiElementExists.Target>
@@ -135,15 +150,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[bExisteLinkBusqueda]" sap:VirtualizedContainerService.HintSize="621,345" sap2010:WorkflowViewState.IdRef="If_8">
+            <If Condition="[bExisteLinkBusqueda]" sap:VirtualizedContainerService.HintSize="695,376" sap2010:WorkflowViewState.IdRef="If_8">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Buscar Proceso de Contratación '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Buscar Proceso de Contratación '" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -161,11 +176,11 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Throw Exception="[new SystemException(&quot;La página de búsqueda no es consistente&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                <Throw Exception="[new SystemException(&quot;La página de búsqueda no es consistente&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_4" />
               </If.Else>
             </If>
           </Sequence>
-          <ui:UiElementExists DisplayName="Element Exists 'Combo año'" Exists="[bExisteCampoBusqueda]" sap:VirtualizedContainerService.HintSize="937,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+          <ui:UiElementExists DisplayName="Element Exists 'Combo año'" Exists="[bExisteCampoBusqueda]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5602d887695ed5084a61b94bdcf2a695" Selector="&lt;webctrl id='selYearSelect' tag='SELECT' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -176,7 +191,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <If Condition="[bExisteCampoBusqueda]" DisplayName="If Existe Campo de Búsqueda" sap:VirtualizedContainerService.HintSize="937,693" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[bExisteCampoBusqueda]" DisplayName="If Existe Campo de Búsqueda" sap:VirtualizedContainerService.HintSize="1456,726" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -184,13 +199,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,546" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence sap:VirtualizedContainerService.HintSize="450,568" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  selYearSelect'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_Config(&quot;ANIO_CONSULTA&quot;).ToString]">
+                <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  selYearSelect'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_Config(&quot;026&quot;).ToString]">
                   <ui:SelectItem.Items>
                     <scg:List x:TypeArguments="x:String" Capacity="16">
                       <x:String>Seleccione</x:String>
@@ -208,7 +223,7 @@
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5602d887695ed5084a61b94bdcf2a695" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='selYearSelect' tag='SELECT' /&gt;" WaitForReady="COMPLETE" />
                   </ui:SelectItem.Target>
                 </ui:SelectItem>
-                <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  selSearchForSel...'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_TransactionItem(&quot;PAR_VALOR&quot;).ToString]">
+                <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  selSearchForSel...'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_TransactionItem(&quot;PAR_VALOR&quot;).ToString]">
                   <ui:SelectItem.Items>
                     <scg:List x:TypeArguments="x:String" Capacity="4">
                       <x:String>Please select...</x:String>
@@ -221,7 +236,7 @@
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2b6452790ee32236a92f4918ea926c33" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='selSearchForSelect' tag='SELECT' /&gt;" WaitForReady="COMPLETE" />
                   </ui:SelectItem.Target>
                 </ui:SelectItem>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnSearch'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnSearch'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="29" OffsetY="10" Position="TopLeft" />
                   </ui:Click.CursorPosition>
@@ -232,10 +247,10 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Throw Exception="[new SystemException(&quot;El formulario de búsqueda simple no se ha cargado correctamente. No existe el campo de búsqueda por palabra clave&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_5" />
+              <Throw Exception="[new SystemException(&quot;El formulario de búsqueda simple no se ha cargado correctamente. No existe el campo de búsqueda por palabra clave&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_5" />
             </If.Else>
           </If>
-          <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="937,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+          <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff2c17d9576e1f9cf72d6fe1e2913175" Selector="&lt;webctrl css-selector='body&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -246,7 +261,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <Assign sap:VirtualizedContainerService.HintSize="937,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign sap:VirtualizedContainerService.HintSize="1456,82" sap2010:WorkflowViewState.IdRef="Assign_8">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
             </Assign.To>
@@ -254,7 +269,7 @@
               <InArgument x:TypeArguments="x:Int32">0</InArgument>
             </Assign.Value>
           </Assign>
-          <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="937,895" sap2010:WorkflowViewState.IdRef="While_1">
+          <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="1456,981" sap2010:WorkflowViewState.IdRef="While_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -264,13 +279,13 @@
             <While.Condition>
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="bExistePorFavorEspere" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
             </While.Condition>
-            <Sequence sap:VirtualizedContainerService.HintSize="526,738" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence sap:VirtualizedContainerService.HintSize="546,823" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign sap:VirtualizedContainerService.HintSize="484,81" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
                 </Assign.To>
@@ -278,21 +293,21 @@
                   <InArgument x:TypeArguments="x:Int32">[iCantEspera+1]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Esperando resultado de la consulta. Espera &quot;+iCantEspera.ToString]" />
-              <If Condition="[iCantEspera.Equals(Integer.Parse(in_Config(&quot;020&quot;).ToString))]" DisplayName="Valida que no se haya agotado el tiempo máximo de espera configurado" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_7">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Esperando resultado de la consulta. Espera &quot;+iCantEspera.ToString]" />
+              <If Condition="[iCantEspera.Equals(Integer.Parse(in_Config(&quot;020&quot;).ToString))]" DisplayName="Valida que no se haya agotado el tiempo máximo de espera configurado" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_7">
                 <If.Then>
-                  <Throw Exception="[new SystemException(&quot;Se agotó el tiempo de espera por resultados. Configuración &quot;+in_Config(&quot;020&quot;).ToString+&quot; Segundos&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  <Throw Exception="[new SystemException(&quot;Se agotó el tiempo de espera por resultados. Configuración &quot;+in_Config(&quot;020&quot;).ToString+&quot; Segundos&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_3" />
                 </If.Then>
               </If>
-              <Delay DisplayName="Delay 5 segundos" Duration="[System.TimeSpan.Parse(&quot;00:00:05&quot;)]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+              <Delay DisplayName="Delay 5 segundos" Duration="[System.TimeSpan.Parse(&quot;00:00:05&quot;)]" sap:VirtualizedContainerService.HintSize="484,25" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff2c17d9576e1f9cf72d6fe1e2913175" Selector="&lt;webctrl css-selector='body&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" TimeoutMS="0" WaitForReady="COMPLETE" />
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
             </Sequence>
           </While>
-          <ui:UiElementExists DisplayName="Element Exists 'Tabla de resultados'" Exists="[bExisteTabla]" sap:VirtualizedContainerService.HintSize="937,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+          <ui:UiElementExists DisplayName="Element Exists 'Tabla de resultados'" Exists="[bExisteTabla]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="231b0cc86325f1fdb7e4fb3e63f3075b" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl id='frmMainForm_tblMainTable' tag='TABLE' /&gt;&lt;webctrl id='frmMainForm_tblMainTable_trRowResults_tdCellResults' tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -303,7 +318,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <If Condition="[bExisteTabla]" DisplayName="If Esiste la Tabla de Resultados" sap:VirtualizedContainerService.HintSize="937,1774" sap2010:WorkflowViewState.IdRef="If_6">
+          <If Condition="[bExisteTabla]" DisplayName="If Esiste la Tabla de Resultados" sap:VirtualizedContainerService.HintSize="1456,3140" sap2010:WorkflowViewState.IdRef="If_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,183 +326,167 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="692,1627" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <Sequence sap:VirtualizedContainerService.HintSize="1211,2982" sap2010:WorkflowViewState.IdRef="Sequence_40">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="iCantCiclos" />
+                  <Variable x:TypeArguments="x:Boolean" Name="bExisteBtnExport" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="650,60" sap2010:WorkflowViewState.IdRef="Assign_37">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[iCantCiclos]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="650,1435" sap2010:WorkflowViewState.IdRef="DoWhile_1">
-                  <DoWhile.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="bHayRegistrosPrevios" />
-                    <Variable x:TypeArguments="x:Boolean" Name="bContinuar" />
-                  </DoWhile.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <DoWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="bContinuar" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
-                  </DoWhile.Condition>
-                  <Sequence sap:VirtualizedContainerService.HintSize="604,1274" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Boolean" Name="bExistenPuntos" />
-                      <Variable x:TypeArguments="x:Boolean" Name="bExisteSiguiente" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[out_DatosCapturados isNot Nothing]" sap:VirtualizedContainerService.HintSize="562,282" sap2010:WorkflowViewState.IdRef="If_20">
+                <ui:UiElementExists DisplayName="Element Exists 'INPUT  btnExportLink'" Exists="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="1149,107" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2b62c77743607401f7113fa69d6f9ec9" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='btnExportLink' tag='INPUT' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <If Condition="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="1149,2724" sap2010:WorkflowViewState.IdRef="If_23">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="654,2566" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Boolean" Name="bExisteArchivoDescarga" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If.Then>
-                        <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,135" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Clear">
-                          <InvokeMethod.TargetObject>
-                            <InArgument x:TypeArguments="sd:DataTable">[out_DatosCapturados]</InArgument>
-                          </InvokeMethod.TargetObject>
-                        </InvokeMethod>
-                      </If.Then>
-                    </If>
-                    <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_DatosCapturados]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'TABLE '" ExtractMetadata="&lt;extract&gt;&lt;row exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;/row&gt;&lt;column name=&quot;Entidad&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;2&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Año&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;3&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Fecha Publicación&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;4&quot; /&gt;&lt;webctrl tag=&quot;div&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Valor&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;5&quot; /&gt;&lt;webctrl tag=&quot;table&quot; /&gt;&lt;webctrl tag=&quot;tbody&quot; /&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;1&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Moneda&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;5&quot; /&gt;&lt;webctrl tag=&quot;table&quot; /&gt;&lt;webctrl tag=&quot;tbody&quot; /&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;2&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Versión&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;6&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Fecha Modificación&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;7&quot; /&gt;&lt;webctrl tag=&quot;div&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Estado&quot; attr=&quot;text&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;8&quot; /&gt;&lt;webctrl tag=&quot;span&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Vínculo Detalle&quot; attr=&quot;onclick&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;9&quot; /&gt;&lt;webctrl tag=&quot;a&quot; /&gt;&lt;/column&gt;&lt;column name=&quot;Vínculo Descarga&quot; attr=&quot;onclick&quot; exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot; /&gt;&lt;webctrl tag=&quot;td&quot; idx=&quot;10&quot; /&gt;&lt;webctrl tag=&quot;a&quot; /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="0">
-                      <ui:ExtractData.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f7204777db4154dc30b2596f2180d672" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='frmMainForm_tblMainTable' tag='TABLE' /&gt;&lt;webctrl id='frmMainForm_tblMainTable_trRowResults_tdCellResults' tag='TD' /&gt;" WaitForReady="COMPLETE" />
-                      </ui:ExtractData.Target>
-                    </ui:ExtractData>
-                    <ui:UiElementExists DisplayName="Element Exists 'INPUT  grdGridAPP_Pagin...'" Exists="[bExistenPuntos]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3756ba4d076e510fa8ef21f0e239c064" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='grdGridAPP_Paginator_goToPage_MoreItems' tag='INPUT' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
-                      </ui:UiElementExists.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:UiElementExists>
-                    <If Condition="[bExistenPuntos]" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="If_21">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnExportLink'" sap:VirtualizedContainerService.HintSize="592,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2b62c77743607401f7113fa69d6f9ec9" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='btnExportLink' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <Delay DisplayName="Delay 00:03:05" Duration="[System.TimeSpan.Parse(&quot;00:03:05&quot;)]" sap:VirtualizedContainerService.HintSize="592,25" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <Assign sap:VirtualizedContainerService.HintSize="592,82" sap2010:WorkflowViewState.IdRef="Assign_39">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="592,982" sap2010:WorkflowViewState.IdRef="While_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <While.Condition>[bExistePorFavorEspere]</While.Condition>
+                        <Sequence sap:VirtualizedContainerService.HintSize="546,824" sap2010:WorkflowViewState.IdRef="Sequence_46">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  grdGridAPP_Pagin...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="70437fe26027f30ad385052c41694a38" Selector="&lt;webctrl id='grdGridAPP_Paginator_goToPage_MoreItems' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                            </ui:Click.Target>
-                          </ui:Click>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                          <Assign sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_40">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="x:Boolean">[bContinuar]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              <InArgument x:TypeArguments="x:Int32">[iCantEspera+1]</InArgument>
                             </Assign.Value>
                           </Assign>
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_35">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Boolean">[bContinuar]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </If.Else>
-                    </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_38">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[iCantCiclos]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[iCantCiclos+1]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,377" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,299" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[iCantCiclos.equals(3)]" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_22">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Esperando resultado de la consulta. Espera &quot;+iCantEspera.ToString]" />
+                          <If Condition="[iCantEspera.Equals(Integer.Parse(in_Config(&quot;022&quot;).ToString))]" DisplayName="Valida que no se haya agotado el tiempo máximo de espera configurado" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_24">
                             <If.Then>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_36">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Boolean">[bContinuar]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                </Assign.Value>
-                              </Assign>
+                              <Throw Exception="[new SystemException(&quot;Se agotó el tiempo de espera por resultados. Configuración &quot;+in_Config(&quot;020&quot;).ToString+&quot; Segundos&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_7" />
                             </If.Then>
                           </If>
+                          <Delay DisplayName="Delay cofigurado adicional" Duration="[System.TimeSpan.Parse(in_Config(&quot;021&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="484,25" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                          <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff2c17d9576e1f9cf72d6fe1e2913175" Selector="&lt;webctrl css-selector='body&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" TimeoutMS="0" WaitForReady="COMPLETE" />
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
                         </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                  </Sequence>
-                </DoWhile>
+                      </While>
+                      <Assign sap:VirtualizedContainerService.HintSize="592,81" sap2010:WorkflowViewState.IdRef="Assign_44">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[strNombreArchivo]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[in_Config("023").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="592,115" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strNombreArchivo]" PathType="File" />
+                      <If Condition="[bExisteArchivoDescarga]" DisplayName="If - Existe archivo" sap:VirtualizedContainerService.HintSize="592,823" sap2010:WorkflowViewState.IdRef="If_25">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="496,636" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strNombreHoja" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_43">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[strNombreHoja]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[in_Config("024").ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ReadRange AddHeaders="True" DataTable="[dtDatosExportados]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[strNombreHoja]" WorkbookPath="[strNombreArchivo]">
+                              <ui:ReadRange.Range>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:ReadRange.Range>
+                            </ui:ReadRange>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_41">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[out_DatosCapturados]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[dtDatosExportados.DefaultView.ToTable(True,"Entidad")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:WriteCsvFile AddHeaders="True" DataTable="[out_DatosCapturados]" Delimitator="Comma" DisplayName="Write CSV" FilePath="C:\Users\Administrator\Downloads\SalidaEntidadesUnicas.csv" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_48">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Throw Exception="[new SystemException(&quot;Error obteniendo resultados de la consulta. No hay botón de exportación de resultados&quot;)]" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                    </Sequence>
+                  </If.Else>
+                </If>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Throw Exception="[new SystemException(&quot;Error obteniendo resultados de la consulta. No hay tabla de resultados&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+              <Throw Exception="[new SystemException(&quot;Error obteniendo resultados de la consulta. No hay tabla de resultados&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
             </If.Else>
           </If>
-          <ui:FilterDataTable DataTable="[out_DatosCapturados]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="937,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_DatosCapturados]" SelectColumnsMode="Keep">
-            <ui:FilterDataTable.Filters>
-              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
-                  <ui:FilterOperationArgument.Column>
-                    <InArgument x:TypeArguments="x:String">["Año"]</InArgument>
-                  </ui:FilterOperationArgument.Column>
-                </ui:FilterOperationArgument>
-              </scg:List>
-            </ui:FilterDataTable.Filters>
-            <ui:FilterDataTable.SelectColumns>
-              <scg:List x:TypeArguments="InArgument" Capacity="4">
-                <x:Null />
-              </scg:List>
-            </ui:FilterDataTable.SelectColumns>
-          </ui:FilterDataTable>
         </Sequence>
       </ActivityAction>
     </ui:BrowserScope.Body>

@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>548,1569</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1218,4402</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -77,16 +77,21 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="558,1544" sap2010:WorkflowViewState.IdRef="Sequence_17">
+  <Sequence sap:VirtualizedContainerService.HintSize="842,4337" sap2010:WorkflowViewState.IdRef="Sequence_17">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;INICIO - InitAllSettings&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="This workflow outputs a settings Dictionary with key/value pairs to be used in the project. Settings are read from local config file then fetched from Orchestrator assets. &#xA;Assets will overwrite the config file settings" DisplayName="Get All Settings" sap:VirtualizedContainerService.HintSize="496,1169" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="780,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;INICIO - InitAllSettings&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="This workflow outputs a settings Dictionary with key/value pairs to be used in the project. Settings are read from local config file then fetched from Orchestrator assets. &#xA;Assets will overwrite the config file settings" DisplayName="Get All Settings" sap:VirtualizedContainerService.HintSize="780,3962" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -94,7 +99,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Asignación de inicio de índice de transacciones" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+      <Assign DisplayName="Asignación de inicio de índice de transacciones" sap:VirtualizedContainerService.HintSize="718,82" sap2010:WorkflowViewState.IdRef="Assign_20">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[out_TransactionRowIndex]</OutArgument>
         </Assign.To>
@@ -102,7 +107,7 @@
           <InArgument x:TypeArguments="x:Int32">-1</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Nuevo Diccionario de Configuraciones" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Nuevo Diccionario de Configuraciones" sap:VirtualizedContainerService.HintSize="718,82" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_Config]</OutArgument>
         </Assign.To>
@@ -110,7 +115,7 @@
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, object)]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Nuevo DataTable de Transacciones" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+      <Assign DisplayName="Nuevo DataTable de Transacciones" sap:VirtualizedContainerService.HintSize="718,82" sap2010:WorkflowViewState.IdRef="Assign_18">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[out_Transactions]</OutArgument>
         </Assign.To>
@@ -118,15 +123,15 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable()]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch DisplayName="Try Carga Datos Desde BD MySQL" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch DisplayName="Try Carga Datos Desde BD MySQL" sap:VirtualizedContainerService.HintSize="718,2116" sap2010:WorkflowViewState.IdRef="TryCatch_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="656,1939" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="680,1888" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="tblParametros" />
             </Sequence.Variables>
@@ -136,15 +141,15 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="594,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Obteniendo parámetros desde base de datos&quot;]" />
-            <Sequence DisplayName="Carga Parámetros" sap:VirtualizedContainerService.HintSize="594,982" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="618,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Obteniendo parámetros desde base de datos&quot;]" />
+            <Sequence DisplayName="Carga Parámetros" sap:VirtualizedContainerService.HintSize="618,997" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Consulta de Parámetros" sap:VirtualizedContainerService.HintSize="532,360" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Consulta de Parámetros" sap:VirtualizedContainerService.HintSize="556,365" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="assets" />
                   <Variable x:TypeArguments="ui:DatabaseConnection" Name="objConexion" />
@@ -155,47 +160,47 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
-                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[tblParametros]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT `PARAMETRO`.`idPARAMETRO`,&#xA;    `PARAMETRO`.`PAR_CODIGO`,&#xA;    `PARAMETRO`.`PAR_DESCRIPCION`,&#xA;    `PARAMETRO`.`PAR_VALOR`&#xA;FROM `PARAMETRO`; ">
+                <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
+                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[tblParametros]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT `PARAMETRO`.`idPARAMETRO`,&#xA;    `PARAMETRO`.`PAR_CODIGO`,&#xA;    `PARAMETRO`.`PAR_DESCRIPCION`,&#xA;    `PARAMETRO`.`PAR_VALOR`&#xA;FROM `PARAMETRO`; ">
                   <ui:ExecuteQuery.Parameters>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:ExecuteQuery.Parameters>
                 </ui:ExecuteQuery>
-                <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+                <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
               </Sequence>
-              <Sequence DisplayName="Carga Diccionario" sap:VirtualizedContainerService.HintSize="532,471" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="Carga Diccionario" sap:VirtualizedContainerService.HintSize="556,481" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[tblParametros]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="490,379" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tblParametros]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="494,370" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="440,230" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="460,253" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <maes:AddToDictionary x:TypeArguments="x:String, x:Object" Dictionary="[out_Config]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="398,138" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[row(&quot;PAR_CODIGO&quot;).ToString()]" Value="[row(&quot;PAR_VALOR&quot;)]" />
+                        <maes:AddToDictionary x:TypeArguments="x:String, x:Object" Dictionary="[out_Config]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="398,142" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[row(&quot;PAR_CODIGO&quot;).ToString()]" Value="[row(&quot;PAR_VALOR&quot;)]" />
                       </Sequence>
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
               </Sequence>
             </Sequence>
-            <Sequence DisplayName="Carga Transacciones" sap:VirtualizedContainerService.HintSize="574,433" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Carga Transacciones" sap:VirtualizedContainerService.HintSize="618,476" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Consulta Parametro Búsqueda por" sap:VirtualizedContainerService.HintSize="376,341" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence DisplayName="Consulta Parametro Búsqueda por" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_18">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="assets" />
                   <Variable x:TypeArguments="ui:DatabaseConnection" Name="objConexion" />
@@ -206,29 +211,20 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
-                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[out_Transactions]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT UUID() AS UID, PAR_VALOR&#xA;FROM PARAMETRO&#xA;WHERE PAR_CODIGO = '001';">
+                <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
+                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[out_Transactions]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT UUID() AS UID, PAR_VALOR&#xA;FROM PARAMETRO&#xA;WHERE PAR_CODIGO = '001';">
                   <ui:ExecuteQuery.Parameters>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:ExecuteQuery.Parameters>
                 </ui:ExecuteQuery>
-                <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2" />
+                <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2" />
               </Sequence>
             </Sequence>
-            <Sequence DisplayName="Definir Año de Consulta" sap:VirtualizedContainerService.HintSize="574,68" sap2010:WorkflowViewState.IdRef="Sequence_33">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <maes:AddToDictionary x:TypeArguments="x:String, x:Object" Dictionary="[out_Config]" DisplayName="Adicionar FechaDesde a Diccionario" sap:VirtualizedContainerService.HintSize="398,138" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_4" Key="ANIO_CONSULTA" Value="[DateTime.Now.Year.ToString()]" />
-            </Sequence>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Finaliza carga de parámetros desde base de datos&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="618,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Finaliza carga de parámetros desde base de datos&quot;]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="620,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="684,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -239,20 +235,20 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,318" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence sap:VirtualizedContainerService.HintSize="450,336" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Error obteniendo parámetros desde base de datos MySQL: [&quot;+exception.Message+&quot;]&quot;]" />
+                <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Error obteniendo parámetros desde base de datos MySQL: [&quot;+exception.Message+&quot;]&quot;]" />
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[exception.StackTrace]" />
               </Sequence>
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Carga Parametros Dese Archivo local" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <TryCatch DisplayName="Try Carga Parametros Dese Archivo local" sap:VirtualizedContainerService.HintSize="718,52" sap2010:WorkflowViewState.IdRef="TryCatch_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -284,7 +280,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[configTable]" DisplayName="Read range settings" sap:VirtualizedContainerService.HintSize="494,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[sheet]" WorkbookPath="[in_configFile]" />
-                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[configTable]" DisplayName="For each row" sap:VirtualizedContainerService.HintSize="494,356" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[configTable]" DisplayName="For each row" sap:VirtualizedContainerService.HintSize="494,356" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
@@ -319,10 +315,10 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -330,12 +326,12 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Ha ocurrido un error al obtener parámetros locales&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Ha ocurrido un error al obtener parámetros locales&quot;]" />
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Crear Registro Ejecución" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+      <TryCatch DisplayName="Try Crear Registro Ejecución" sap:VirtualizedContainerService.HintSize="534,979" sap2010:WorkflowViewState.IdRef="TryCatch_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -343,7 +339,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="Registro inicio ejecución en base de datos" sap:VirtualizedContainerService.HintSize="376,707" sap2010:WorkflowViewState.IdRef="Sequence_36">
+          <Sequence DisplayName="Registro inicio ejecución en base de datos" sap:VirtualizedContainerService.HintSize="496,751" sap2010:WorkflowViewState.IdRef="Sequence_36">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="iTmpCant" />
               <Variable x:TypeArguments="ui:DatabaseConnection" Name="sqlConnection" />
@@ -355,27 +351,27 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;INICIO - Registro inicio ejecución en base de datos&quot;]" />
-            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;INICIO - Registro inicio ejecución en base de datos&quot;]" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[strInsert]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">["INSERT INTO REGISTRO_EJECUCION(REGISTRO_TIMESTAMP,REGISTRO_BUSQUEDA_POR,REGISTRO_BUSQUEDA_ANIO) VALUES('"+date.Now.ToString("yyyy-MM-dd HH:mm:ss")+"','"+out_Config("001").ToString+"','"+out_Config("ANIO_CONSULTA").ToString+"');"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["INSERT INTO REGISTRO_EJECUCION(REGISTRO_TIMESTAMP,REGISTRO_BUSQUEDA_POR,REGISTRO_BUSQUEDA_ANIO) VALUES('"+date.Now.ToString("yyyy-MM-dd HH:mm:ss")+"','"+out_Config("001").ToString+"','"+out_Config("026").ToString+"');"]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:DatabaseConnect DatabaseConnection="[sqlConnection]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
-            <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[iTmpCant]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[sqlConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="[strInsert]">
+            <ui:DatabaseConnect DatabaseConnection="[sqlConnection]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
+            <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[iTmpCant]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[sqlConnection]" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="[strInsert]">
               <ui:ExecuteNonQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteNonQuery.Parameters>
             </ui:ExecuteNonQuery>
-            <ui:DatabaseDisconnect DatabaseConnection="[sqlConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_3" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;FIN - Registro inicio ejecución en base de datos&quot;]" />
+            <ui:DatabaseDisconnect DatabaseConnection="[sqlConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_3" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;FIN - Registro inicio ejecución en base de datos&quot;]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -386,12 +382,12 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Ha ocurrido un error al crear el registro de la ejecución&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Ha ocurrido un error al crear el registro de la ejecución&quot;]" />
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Eliminar registros PAA actuales" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+      <TryCatch DisplayName="Try Eliminar registros PAA actuales" sap:VirtualizedContainerService.HintSize="718,52" sap2010:WorkflowViewState.IdRef="TryCatch_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -439,12 +435,12 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Eliminar Archivo Datos Descarga" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+      <TryCatch DisplayName="Try Eliminar Archivo Datos Descarga" sap:VirtualizedContainerService.HintSize="718,996" sap2010:WorkflowViewState.IdRef="TryCatch_6">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="strNombreArchivo" />
         </TryCatch.Variables>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="548,743" sap2010:WorkflowViewState.IdRef="Sequence_38">
+          <Sequence sap:VirtualizedContainerService.HintSize="548,768" sap2010:WorkflowViewState.IdRef="Sequence_38">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bExisteArchivoDescarga" />
             </Sequence.Variables>
@@ -461,7 +457,7 @@
                 <InArgument x:TypeArguments="x:String">[out_Config("023").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:PathExists DisplayName="Path Exists" Exists="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strNombreArchivo]" PathType="File" />
+            <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="486,115" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strNombreArchivo]" PathType="File" />
             <If Condition="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="486,380" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="Sequence_39">
@@ -470,7 +466,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[strNombreArchivo]" />
+                  <ui:Delete ContinueOnError="{x:Null}" ResourceFile="{x:Null}" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[strNombreArchivo]" />
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -486,10 +482,10 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -502,6 +498,6 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;FIN - InitAllSettings&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="780,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;FIN - InitAllSettings&quot;]" />
   </Sequence>
 </Activity>

@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1205,3065</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1010,2905</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="25">
+    <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities</x:String>
@@ -34,35 +34,41 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>TimeSpan2</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="960,2900" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="1020,2880" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="uiNavegador" />
       <Variable x:TypeArguments="x:Boolean" Name="bExisteFormBusquedaProcesos" />
@@ -73,14 +79,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="918,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;INICIO - Inicialización de aplicaciones&quot;]" />
-    <ui:OpenBrowser BrowserType="Chrome" DisplayName="Abrir IE y Buscar Palabra" Hidden="False" sap:VirtualizedContainerService.HintSize="918,2474" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" UiBrowser="[uiNavegador]" Url="[in_Config(&quot;015&quot;).ToString()]">
+    <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="958,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;INICIO - Inicialización de aplicaciones&quot;]" />
+    <ui:OpenBrowser BrowserType="Chrome" DisplayName="Abrir IE y Buscar Palabra" Hidden="False" sap:VirtualizedContainerService.HintSize="958,2433" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" UiBrowser="[uiNavegador]" Url="[in_Config(&quot;015&quot;).ToString()]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="884,2375" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="924,2333" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Window" Name="uiWindow" />
             </Sequence.Variables>
@@ -89,42 +95,42 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[uiWindow]" DisplayName="Attach Window 'explorer.exe'" sap:VirtualizedContainerService.HintSize="842,260" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="de791aea25ce8b74fe9c3f260a1992f6" Selector="&lt;html app='chrome.exe' title='secop-ii | Colombia Compra Eficiente | Agencia Nacional de Contr*' /&gt;">
+            <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[uiWindow]" DisplayName="Attach Window 'explorer.exe'" sap:VirtualizedContainerService.HintSize="862,283" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="de791aea25ce8b74fe9c3f260a1992f6" Selector="&lt;html app='chrome.exe' title='secop-ii | Colombia Compra Eficiente | Agencia Nacional de Contr*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[uiWindow]" />
+                    <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[uiWindow]" />
                   </Sequence>
                 </ActivityAction>
               </ui:WindowScope.Body>
             </ui:WindowScope>
-            <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[uiNavegador]" BrowserType="IE" DisplayName="Attach Browser 'Secop iiC Page'" sap:VirtualizedContainerService.HintSize="842,1983" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0994bedb2b2ebdd956df7ccb17a5168d">
+            <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[uiNavegador]" BrowserType="IE" DisplayName="Attach Browser 'Secop iiC Page'" sap:VirtualizedContainerService.HintSize="862,1899" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0994bedb2b2ebdd956df7ccb17a5168d">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Buscar Palabra" sap:VirtualizedContainerService.HintSize="808,1837" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence DisplayName="Buscar Palabra" sap:VirtualizedContainerService.HintSize="828,1752" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:AnchorBase AnchorPosition="Left" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="766,198" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                    <ui:AnchorBase AnchorPosition="Left" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="766,200" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                       <ui:AnchorBase.Action>
                         <ActivityAction x:TypeArguments="ui:Anchor">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                           </ActivityAction.Argument>
-                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic en búsqueda de procesos" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic en búsqueda de procesos" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition OffsetX="66" OffsetY="74" Position="TopLeft" />
                             </ui:Click.CursorPosition>
@@ -135,19 +141,19 @@
                         </ActivityAction>
                       </ui:AnchorBase.Action>
                       <ui:AnchorBase.AnchorProvider>
-                        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'IMG '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
+                        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'IMG '" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
                           <ui:WaitUiElementAppear.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5088076f8547f66b9baf217a65eb3be2" Selector="&lt;webctrl parentid='main-content' src='/sites/cce_public/files/icono_secop_2-6.png' tag='IMG' /&gt;" WaitForReady="COMPLETE" />
                           </ui:WaitUiElementAppear.Target>
                         </ui:WaitUiElementAppear>
                       </ui:AnchorBase.AnchorProvider>
                     </ui:AnchorBase>
-                    <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteFormBusquedaProcesos]" sap:VirtualizedContainerService.HintSize="766,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteFormBusquedaProcesos]" sap:VirtualizedContainerService.HintSize="766,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b6c3ad9182bbb40a18ac2519ce201492" Selector="&lt;html app='chrome.exe' title='Buscar proceso' /&gt;&lt;webctrl aaname='Plan anual de adquisiciones (PAA)' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[bExisteFormBusquedaProcesos.Equals(false)]" sap:VirtualizedContainerService.HintSize="766,1361" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[bExisteFormBusquedaProcesos.Equals(false)]" sap:VirtualizedContainerService.HintSize="766,1254" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -155,30 +161,22 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="563,1214" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="594,1067" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Se identificó solicitud de captcha. Se envía correo de notificación para resolverlo&quot;]" />
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="521,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName=" Utils\EnvioCorreos.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">[in_Config("019").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">Bot SECOP PAA - Solicitud de Captcha</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_TextoCorreo">Requiere de su atención. Por favor resolver captcha en servidor RPA</InArgument>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                          <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Requiere de su acción" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="521,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Requiere de su atención. Por favor resolver captcha en servidor RPA&quot;]" TopMost="True" />
-                          <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteFormBusquedaProcesos]" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="532,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Se identificó solicitud de captcha. Se envía correo de notificación para resolverlo&quot;]" />
+                          <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Requiere de su acción" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="532,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Requiere de su atención. Por favor resolver captcha en servidor RPA&quot;]" TopMost="True" />
+                          <ui:UiElementExists DisplayName="Element Exists 'PAA'" Exists="[bExisteFormBusquedaProcesos]" sap:VirtualizedContainerService.HintSize="532,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c094bd7bc885352cc72e385fad76aa94" Selector="&lt;webctrl aaname='Plan anual de adquisiciones (PAA)' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
-                          <If Condition="[bExisteFormBusquedaProcesos.Equals(false)]" sap:VirtualizedContainerService.HintSize="521,619" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If Condition="[bExisteFormBusquedaProcesos.Equals(false)]" sap:VirtualizedContainerService.HintSize="532,577" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,472" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <Sequence sap:VirtualizedContainerService.HintSize="496,390" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="s:SystemException" Name="objExcepcion" />
                                 </Sequence.Variables>
@@ -187,7 +185,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="s:SystemException">[objExcepcion]</OutArgument>
                                   </Assign.To>
@@ -195,16 +193,8 @@
                                     <InArgument x:TypeArguments="s:SystemException">[new SystemException("No se pudo completar la transacción debido a captcha sin resolver")]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Excepción inicializando aplicaciones. No se ha resuelto el captcha&quot;]" />
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName=" Utils\EnvioCorreos.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Destinatarios">[in_Config("019").ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Asunto">Bot SECOP PAA - Fallo iniciando aplicaciones</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_TextoCorreo" xml:space="preserve">Ha ocurrido un error durante la inicialización de aplicaciones para la ejecución. No se resolvió el captcha </InArgument>
-                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <Throw Exception="[objExcepcion]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Excepción inicializando aplicaciones. No se ha resuelto el captcha&quot;]" />
+                                <Throw Exception="[objExcepcion]" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Throw_1" />
                               </Sequence>
                             </If.Then>
                           </If>
@@ -225,6 +215,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="918,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;FIN - Inicialización de aplicaciones&quot;]" />
+    <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="958,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;FIN - Inicialización de aplicaciones&quot;]" />
   </Sequence>
 </Activity>

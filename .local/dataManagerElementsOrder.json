@@ -1,0 +1,270 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemError&StateMachine_1",
+        "BusinessRuleException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "TransactionData&StateMachine_1",
+        "Transactions&StateMachine_1",
+        "TransactionRowIndex&StateMachine_1",
+        "TotalRegistrosInsertados&StateMachine_1",
+        "iTmpCant&Sequence_27",
+        "sqlConnection&Sequence_27",
+        "strUpdate&Sequence_27",
+        "ShouldStop&Sequence_1",
+        "sqlConnection&Sequence_20",
+        "iTmpCant&Sequence_26",
+        "sqlConnection&Sequence_26",
+        "strUpdate&Sequence_26"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "OrchestratorQueueName",
+        "argument1"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strTituloPaginaSECOP&Sequence_1",
+        "uiNavegador&Sequence_1",
+        "bExisteFormBusquedaProcesos&Sequence_1",
+        "dtDatosConsultados&Sequence_1",
+        "iCantRegsInsertados&Sequence_1",
+        "strUpdate&Sequence_1",
+        "bEsPalabraNueva&Sequence_1",
+        "strFechaPublicacionDesde&Sequence_1",
+        "strFechaPublicacionHasta&Sequence_1",
+        "strUpdate&Sequence_19",
+        "sqlConnection&Sequence_19",
+        "iTmpCant&Sequence_21",
+        "sqlConnection&Sequence_21",
+        "iTmpCant&Sequence_20",
+        "sqlConnection&Sequence_20"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "out_CantRegistrosInsertados"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DescargarArchivosPAA.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strIndiceRegistro&Sequence_4",
+        "strLinkDescarga&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DatosConsultados",
+        "in_UINavegador",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "BuscarPalabra.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strFechaDesde&Sequence_4",
+        "strFechaHasta&Sequence_4",
+        "uiEspere&Sequence_4",
+        "bVerMas&Sequence_4",
+        "iCantEspera&Sequence_4",
+        "bExistePorFavorEspere&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_TransactionItem",
+        "in_UINavegador",
+        "out_DatosCapturados",
+        "out_EsPalabraNueva",
+        "out_FechaPublicacionDesde",
+        "out_FechaPublicacionHasta"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "BusquedaSimple.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bHayRegistrosPrevios&DoWhile_1",
+        "bContinuar&DoWhile_1",
+        "bExistenPuntos&Sequence_21",
+        "bExisteSiguiente&Sequence_21",
+        "bExisteCampoBusqueda&Sequence_8",
+        "bExisteTabla&Sequence_8",
+        "dateFechaPublicacion&Sequence_8",
+        "dateFechaConsultaHasta&Sequence_8",
+        "dateFechaConsultaDesde&Sequence_8",
+        "arrayIndicesEliminar&Sequence_8",
+        "bExisteLinkBusqueda&Sequence_18",
+        "iCantCiclos&Sequence_40"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "iCantEspera",
+        "bVerMas",
+        "strFechaDesde",
+        "strFechaHasta",
+        "bExistePorFavorEspere",
+        "in_Config",
+        "in_TransactionItem",
+        "in_UINavegador",
+        "out_DatosCapturados"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bExisteArchivoDescarga&Sequence_38",
+        "strNombreArchivo&TryCatch_6",
+        "tblParametros&Sequence_22",
+        "assets&Sequence_6",
+        "objConexion&Sequence_6",
+        "assets&Sequence_18",
+        "objConexion&Sequence_18",
+        "configTable&Sequence_34",
+        "iTmpCant&Sequence_36",
+        "sqlConnection&Sequence_36",
+        "strInsert&Sequence_36",
+        "iTmpCant&Sequence_37",
+        "sqlConnection&Sequence_37",
+        "strInsert&Sequence_37"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config",
+        "out_Transactions",
+        "out_TransactionRowIndex"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PersistirResultadosConsultas.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtDatosConsultaFiltrados&Sequence_28",
+        "dtExtractDataTable&Sequence_28",
+        "dateFechaPublicacion&Sequence_3",
+        "dateFechaModificacion&Sequence_3",
+        "decValor&Sequence_3",
+        "strMoneda&Sequence_3",
+        "strEntidad&Sequence_3",
+        "strEstado&Sequence_3",
+        "strURLDetalle&Sequence_3",
+        "iAnio&Sequence_3",
+        "iVersion&Sequence_3",
+        "strFechaPublicacion&Sequence_3",
+        "strFechaModificacion&Sequence_3",
+        "strDescargaID&Sequence_3",
+        "strDescargaPPI&Sequence_3",
+        "strDescargaMKEY&Sequence_3",
+        "arrayTMP_URL&Sequence_3",
+        "strTMP_URL&Sequence_3",
+        "strID_TMP&Sequence_3",
+        "bExisteCampoBusqueda&Sequence_26",
+        "bExisteTabla&Sequence_26",
+        "dateFechaPublicacion&Sequence_26",
+        "dateFechaConsultaHasta&Sequence_26",
+        "dateFechaConsultaDesde&Sequence_26",
+        "arrayIndicesEliminar&Sequence_26",
+        "dtDatosExportados&Sequence_26",
+        "dtDatosFiltrados&Sequence_26",
+        "strNombreArchivo&Sequence_26",
+        "bExisteLinkBusqueda&Sequence_27",
+        "iCantCiclos&Sequence_28",
+        "bExisteBtnExport&Sequence_28",
+        "sqlConnection&Sequence_1",
+        "strInsert&Sequence_10",
+        "iTmpCant&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_UINavegador",
+        "in_DatosConsultados",
+        "in_Palabra",
+        "in_Config",
+        "iCantRegs"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "uiNavegador&Sequence_9",
+        "bExisteFormBusquedaProcesos&Sequence_9",
+        "uiWindow&Sequence_15",
+        "objExcepcion&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetAppCredentials.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&",
+        "SystemError&",
+        "BusinessRuleException&",
+        "TransactionNumber&",
+        "Config&",
+        "RetryNumber&",
+        "TransactionField2&",
+        "TransactionField1&",
+        "TransactionID&",
+        "TransactionData&",
+        "Transactions&",
+        "TransactionRowIndex&",
+        "TotalRegistrosInsertados&",
+        "iTmpCant&",
+        "sqlConnection&",
+        "strUpdate&",
+        "ShouldStop&",
+        "sqlConnection&",
+        "iTmpCant&",
+        "sqlConnection&",
+        "strUpdate&"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Username",
+        "in_Credential",
+        "out_Password"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

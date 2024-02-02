@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1218,4402</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1218,5336</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -81,17 +81,16 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="842,4337" sap2010:WorkflowViewState.IdRef="Sequence_17">
+  <Sequence sap:VirtualizedContainerService.HintSize="842,5271" sap2010:WorkflowViewState.IdRef="Sequence_17">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="780,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;INICIO - InitAllSettings&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="This workflow outputs a settings Dictionary with key/value pairs to be used in the project. Settings are read from local config file then fetched from Orchestrator assets. &#xA;Assets will overwrite the config file settings" DisplayName="Get All Settings" sap:VirtualizedContainerService.HintSize="780,3962" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="This workflow outputs a settings Dictionary with key/value pairs to be used in the project. Settings are read from local config file then fetched from Orchestrator assets. &#xA;Assets will overwrite the config file settings" DisplayName="Get All Settings" sap:VirtualizedContainerService.HintSize="780,4896" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,7 +241,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Error obteniendo parámetros desde base de datos MySQL: [&quot;+exception.Message+&quot;]&quot;]" />
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[exception.StackTrace]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[exception.StackTrace]" />
               </Sequence>
             </ActivityAction>
           </Catch>
@@ -331,7 +330,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Crear Registro Ejecución" sap:VirtualizedContainerService.HintSize="534,979" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+      <TryCatch DisplayName="Try Crear Registro Ejecución" sap:VirtualizedContainerService.HintSize="718,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -387,15 +386,15 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Eliminar registros PAA actuales" sap:VirtualizedContainerService.HintSize="718,52" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+      <TryCatch DisplayName="Try Eliminar registros PAA actuales" sap:VirtualizedContainerService.HintSize="718,986" sap2010:WorkflowViewState.IdRef="TryCatch_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="Eliminación registros PAA" sap:VirtualizedContainerService.HintSize="450,627" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <Sequence DisplayName="Eliminación registros PAA" sap:VirtualizedContainerService.HintSize="450,758" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="iTmpCant" />
               <Variable x:TypeArguments="ui:DatabaseConnection" Name="sqlConnection" />
@@ -414,12 +413,17 @@
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteNonQuery.Parameters>
             </ui:ExecuteNonQuery>
-            <ui:DatabaseDisconnect DatabaseConnection="[sqlConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_4" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;FIN - Eliminación registros PAA&quot;]" />
+            <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[iTmpCant]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[sqlConnection]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" Sql="DELETE FROM ENTIDADES_PENDIENTES">
+              <ui:ExecuteNonQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteNonQuery.Parameters>
+            </ui:ExecuteNonQuery>
+            <ui:DatabaseDisconnect DatabaseConnection="[sqlConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_4" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;FIN - Eliminación registros PAA&quot;]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -430,7 +434,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Trace" Message="[&quot;Ha ocurrido un error al eliminar registros PAA&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Trace" Message="[&quot;Ha ocurrido un error al eliminar registros PAA&quot;]" />
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>

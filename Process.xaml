@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>588,1430</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>865,827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -38,6 +38,10 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -71,9 +75,17 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProcessTransaction" sap:VirtualizedContainerService.HintSize="598,1405" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProcessTransaction" sap:VirtualizedContainerService.HintSize="875,722" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strTituloPaginaSECOP" />
       <Variable x:TypeArguments="ui:Browser" Name="uiNavegador" />
@@ -91,8 +103,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="536,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;INICIO - Procesando transacción: &quot;+in_TransactionItem(&quot;UID&quot;).ToString()+&quot;. Búsqueda por: [&quot;+in_TransactionItem(&quot;PAR_VALOR&quot;).ToString+&quot;]&quot;]" />
-    <Assign DisplayName="Asignar titulo de ventana desde parámetros" sap:VirtualizedContainerService.HintSize="536,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="813,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;INICIO - Procesando transacción: &quot;+in_TransactionItem(&quot;UID&quot;).ToString()+&quot;. Búsqueda por: [&quot;+in_TransactionItem(&quot;PAR_VALOR&quot;).ToString+&quot;]&quot;]" />
+    <Assign DisplayName="Asignar titulo de ventana desde parámetros" sap:VirtualizedContainerService.HintSize="813,81" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strTituloPaginaSECOP]</OutArgument>
       </Assign.To>
@@ -100,7 +112,7 @@
         <InArgument x:TypeArguments="x:String">[in_Config("016").ToString()]</InArgument>
       </Assign.Value>
     </Assign>
-    <TryCatch DisplayName="Try Consultar y Persistir Datos" sap:VirtualizedContainerService.HintSize="536,851" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Consultar y Persistir Datos" sap:VirtualizedContainerService.HintSize="813,184" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -108,7 +120,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="775,1918" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <Sequence sap:VirtualizedContainerService.HintSize="775,2887" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strUpdate" />
             <Variable x:TypeArguments="ui:DatabaseConnection" Name="sqlConnection" />
@@ -118,31 +130,31 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Consultar datos" sap:VirtualizedContainerService.HintSize="713,744" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Consultar datos" sap:VirtualizedContainerService.HintSize="713,789" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Secop iiC Page'" sap:VirtualizedContainerService.HintSize="580,633" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="9e5fafc0b31827942ab5cfa951e79ee9" Selector="&lt;html title='Buscar proceso' /&gt;" UiBrowser="[uiNavegador]">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Secop iiC Page'" sap:VirtualizedContainerService.HintSize="580,678" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="9e5fafc0b31827942ab5cfa951e79ee9" Selector="&lt;html title='Buscar proceso' /&gt;" UiBrowser="[uiNavegador]">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="546,486" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence sap:VirtualizedContainerService.HintSize="546,531" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[dtDatosConsultados isNot Nothing]" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[dtDatosConsultados isNot Nothing]" sap:VirtualizedContainerService.HintSize="484,267" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <ui:ClearDataTable DataTable="[dtDatosConsultados]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+                        <ui:ClearDataTable DataTable="[dtDatosConsultados]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="284,80" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
                       </If.Then>
                     </If>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="484,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BuscarPalabra.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="484,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BuscarPalabra.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                         <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
@@ -166,7 +178,7 @@
               <InArgument x:TypeArguments="x:Int32">0</InArgument>
             </Assign.Value>
           </Assign>
-          <If Condition="[dtDatosConsultados.Rows.Count &gt; 0]" DisplayName="Inserta en base de datos si hay resultados" sap:VirtualizedContainerService.HintSize="713,252" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[dtDatosConsultados.Rows.Count &gt; 0]" DisplayName="Inserta en base de datos si hay resultados" sap:VirtualizedContainerService.HintSize="713,273" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +186,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="PersistirResultadosConsultas.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="PersistirResultadosConsultas.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DatosConsultados">[dtDatosConsultados]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Palabra">[in_TransactionItem("PAR_VALOR").ToString()]</InArgument>
@@ -197,6 +209,86 @@
               <InArgument x:TypeArguments="x:Int32">[out_CantRegistrosInsertados+iCantRegsInsertados]</InArgument>
             </Assign.Value>
           </Assign>
+          <Sequence DisplayName="Consulta Entidades Pendientes" sap:VirtualizedContainerService.HintSize="713,863" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="assets" />
+              <Variable x:TypeArguments="ui:DatabaseConnection" Name="objConexion" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtEntidadesPendientes" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Consulta BD" sap:VirtualizedContainerService.HintSize="548,81" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
+              <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dtEntidadesPendientes]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT * FROM ENTIDADES_PENDIENTES">
+                <ui:ExecuteQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteQuery.Parameters>
+              </ui:ExecuteQuery>
+              <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_4" />
+            </Sequence>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="548,631" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,465" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PersistirResultadosPendientes.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PersistirResultadosPendientes.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DatosConsultados">
+                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtEntidadesPendientes" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Palabra">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;PAR_VALOR&quot;).ToString()" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="x:Int32" x:Key="iCantRegs">
+                        <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="iCantRegsInsertados" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="ui:Browser" x:Key="in_UINavegador">
+                        <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="uiNavegador" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">
+                        <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:ClearDataTable DataTable="[dtEntidadesPendientes]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+                  <Sequence DisplayName="Consulta BD" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:DatabaseConnect DatabaseConnection="[objConexion]" DisplayName="Conectar a BD MySQL" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_5" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
+                    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dtEntidadesPendientes]" DisplayName="Consulta Tabla Parámetros" ExistingDbConnection="[objConexion]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT * FROM ENTIDADES_PENDIENTES">
+                      <ui:ExecuteQuery.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:ExecuteQuery.Parameters>
+                    </ui:ExecuteQuery>
+                    <ui:DatabaseDisconnect DatabaseConnection="[objConexion]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_5" />
+                  </Sequence>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="dtEntidadesPendientes.Rows.Count &gt; 0" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
+          </Sequence>
           <Sequence DisplayName="Registro resultado ejecución en base de datos" sap:VirtualizedContainerService.HintSize="713,487" sap2010:WorkflowViewState.IdRef="Sequence_21">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="iTmpCant" />
@@ -227,10 +319,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,688" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -264,12 +356,12 @@
                 </ui:ExecuteNonQuery.Parameters>
               </ui:ExecuteNonQuery>
               <ui:DatabaseDisconnect DatabaseConnection="[sqlConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2" />
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Excepción procesando la transacción con palabra [&quot;+in_TransactionItem(&quot;PARAM_VALOR&quot;).ToString+&quot;].  Mensaje: &quot;+exception.Message+&quot;. Stacktrace: &quot;+exception.StackTrace]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Excepción procesando la transacción. Mensaje: &quot;+exception.Message+&quot;. Stacktrace: &quot;+exception.StackTrace]" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="536,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;FIN -  Procesando transacción: &quot;+in_TransactionItem(&quot;UID&quot;).ToString()+&quot;. Búsqueda por: [&quot;+in_TransactionItem(&quot;PAR_VALOR&quot;).ToString+&quot;]&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="813,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;FIN -  Procesando transacción: &quot;+in_TransactionItem(&quot;UID&quot;).ToString()+&quot;. Búsqueda por: [&quot;+in_TransactionItem(&quot;PAR_VALOR&quot;).ToString+&quot;]&quot;]" />
   </Sequence>
 </Activity>

@@ -73,10 +73,16 @@
       "Path": "DescargarArchivosPAA.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "iIndexTabla&Sequence_2",
+        "arrArchivosActuales&Sequence_4",
+        "arrArchivosBase&Sequence_4",
+        "strNombreBase&Sequence_5",
+        "arrNombreSplit&Sequence_5",
         "strIndiceRegistro&Sequence_4",
         "strLinkDescarga&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_Entidad",
         "in_DatosConsultados",
         "in_UINavegador",
         "in_Config"

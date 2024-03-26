@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1542,6487</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1384,5095</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -103,16 +103,16 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_UINavegador]" BrowserType="Chrome" DisplayName="Attach Browser 'Buscarpro Page'" sap:VirtualizedContainerService.HintSize="1552,6422" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9604690702f9d3b2539b762b39602624">
+  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_UINavegador]" BrowserType="Chrome" DisplayName="Attach Browser 'Buscarpro Page'" sap:VirtualizedContainerService.HintSize="1394,4950" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9604690702f9d3b2539b762b39602624">
     <ui:BrowserScope.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1518,6275" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1360,4723" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="bExisteCampoBusqueda" />
             <Variable x:TypeArguments="x:Boolean" Name="bExisteTabla" />
@@ -129,7 +129,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Asegurar Formulario de Búsqueda Avanzada" sap:VirtualizedContainerService.HintSize="1456,634" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence DisplayName="Asegurar Formulario de Búsqueda Avanzada" sap:VirtualizedContainerService.HintSize="1298,634" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bExisteLinkBusqueda" />
             </Sequence.Variables>
@@ -180,7 +180,7 @@
               </If.Else>
             </If>
           </Sequence>
-          <ui:UiElementExists DisplayName="Element Exists 'Combo año'" Exists="[bExisteCampoBusqueda]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+          <ui:UiElementExists DisplayName="Element Exists 'Combo año'" Exists="[bExisteCampoBusqueda]" sap:VirtualizedContainerService.HintSize="1298,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5602d887695ed5084a61b94bdcf2a695" Selector="&lt;webctrl id='selYearSelect' tag='SELECT' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -191,7 +191,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <If Condition="[bExisteCampoBusqueda]" DisplayName="If Existe Campo de Búsqueda" sap:VirtualizedContainerService.HintSize="1456,726" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[bExisteCampoBusqueda]" DisplayName="If Existe Campo de Búsqueda" sap:VirtualizedContainerService.HintSize="1298,726" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -250,7 +250,7 @@
               <Throw Exception="[new SystemException(&quot;El formulario de búsqueda simple no se ha cargado correctamente. No existe el campo de búsqueda por palabra clave&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_5" />
             </If.Else>
           </If>
-          <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+          <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="1298,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff2c17d9576e1f9cf72d6fe1e2913175" Selector="&lt;webctrl css-selector='body&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -261,7 +261,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <Assign sap:VirtualizedContainerService.HintSize="1456,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign sap:VirtualizedContainerService.HintSize="1298,82" sap2010:WorkflowViewState.IdRef="Assign_8">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
             </Assign.To>
@@ -269,7 +269,7 @@
               <InArgument x:TypeArguments="x:Int32">0</InArgument>
             </Assign.Value>
           </Assign>
-          <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="1456,981" sap2010:WorkflowViewState.IdRef="While_1">
+          <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="1298,982" sap2010:WorkflowViewState.IdRef="While_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -279,13 +279,13 @@
             <While.Condition>
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="bExistePorFavorEspere" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
             </While.Condition>
-            <Sequence sap:VirtualizedContainerService.HintSize="546,823" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence sap:VirtualizedContainerService.HintSize="546,824" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="484,81" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
                 </Assign.To>
@@ -307,7 +307,7 @@
               </ui:UiElementExists>
             </Sequence>
           </While>
-          <ui:UiElementExists DisplayName="Element Exists 'Tabla de resultados'" Exists="[bExisteTabla]" sap:VirtualizedContainerService.HintSize="1456,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+          <ui:UiElementExists DisplayName="Element Exists 'Tabla de resultados'" Exists="[bExisteTabla]" sap:VirtualizedContainerService.HintSize="1298,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="231b0cc86325f1fdb7e4fb3e63f3075b" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl id='frmMainForm_tblMainTable' tag='TABLE' /&gt;&lt;webctrl id='frmMainForm_tblMainTable_trRowResults_tdCellResults' tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
@@ -318,7 +318,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
-          <If Condition="[bExisteTabla]" DisplayName="If Esiste la Tabla de Resultados" sap:VirtualizedContainerService.HintSize="1456,3140" sap2010:WorkflowViewState.IdRef="If_6">
+          <If Condition="[bExisteTabla]" DisplayName="If Esiste la Tabla de Resultados" sap:VirtualizedContainerService.HintSize="1298,1587" sap2010:WorkflowViewState.IdRef="If_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -326,7 +326,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="1211,2982" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <Sequence sap:VirtualizedContainerService.HintSize="1053,1429" sap2010:WorkflowViewState.IdRef="Sequence_40">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="iCantCiclos" />
                   <Variable x:TypeArguments="x:Boolean" Name="bExisteBtnExport" />
@@ -336,14 +336,14 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="Element Exists 'INPUT  btnExportLink'" Exists="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="1149,107" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
+                <ui:UiElementExists DisplayName="Element Exists 'INPUT  btnExportLink'" Exists="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="991,107" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2b62c77743607401f7113fa69d6f9ec9" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='btnExportLink' tag='INPUT' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="1149,2724" sap2010:WorkflowViewState.IdRef="If_23">
+                <If Condition="[bExisteBtnExport]" sap:VirtualizedContainerService.HintSize="991,1171" sap2010:WorkflowViewState.IdRef="If_23">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="654,2566" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,1013" sap2010:WorkflowViewState.IdRef="Sequence_44">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="bExisteArchivoDescarga" />
                       </Sequence.Variables>
@@ -352,7 +352,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnExportLink'" sap:VirtualizedContainerService.HintSize="592,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnExportLink'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -367,8 +367,8 @@
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2b62c77743607401f7113fa69d6f9ec9" Selector="&lt;html app='chrome.exe' title='Plan anual de adquisiciones (PAA)' /&gt;&lt;webctrl id='btnExportLink' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                         </ui:Click.Target>
                       </ui:Click>
-                      <Delay DisplayName="Delay 00:03:05" Duration="[System.TimeSpan.Parse(&quot;00:03:05&quot;)]" sap:VirtualizedContainerService.HintSize="592,25" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                      <Assign sap:VirtualizedContainerService.HintSize="592,82" sap2010:WorkflowViewState.IdRef="Assign_39">
+                      <Delay DisplayName="Delay 00:03:05" Duration="[System.TimeSpan.Parse(&quot;00:03:05&quot;)]" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_39">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[iCantEspera]</OutArgument>
                         </Assign.To>
@@ -376,10 +376,21 @@
                           <InArgument x:TypeArguments="x:Int32">0</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="592,982" sap2010:WorkflowViewState.IdRef="While_2">
+                      <ui:UiElementExists DisplayName="Element Exists 'Por Favor Espere'" Exists="[bExistePorFavorEspere]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_13">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff2c17d9576e1f9cf72d6fe1e2913175" Selector="&lt;webctrl css-selector='body&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
+                        </ui:UiElementExists.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:UiElementExists>
+                      <While DisplayName="While Exista Por Favor Espere" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="While_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -412,7 +423,7 @@
                           </ui:UiElementExists>
                         </Sequence>
                       </While>
-                      <Assign sap:VirtualizedContainerService.HintSize="592,81" sap2010:WorkflowViewState.IdRef="Assign_44">
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_44">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[strNombreArchivo]</OutArgument>
                         </Assign.To>
@@ -420,8 +431,14 @@
                           <InArgument x:TypeArguments="x:String">[in_Config("023").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="592,115" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strNombreArchivo]" PathType="File" />
-                      <If Condition="[bExisteArchivoDescarga]" DisplayName="If - Existe archivo" sap:VirtualizedContainerService.HintSize="592,823" sap2010:WorkflowViewState.IdRef="If_25">
+                      <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[bExisteArchivoDescarga]" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strNombreArchivo]" PathType="File" />
+                      <If Condition="[bExisteArchivoDescarga]" DisplayName="If - Existe archivo" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="496,636" sap2010:WorkflowViewState.IdRef="Sequence_47">
                             <Sequence.Variables>

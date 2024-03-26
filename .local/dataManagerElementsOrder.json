@@ -45,6 +45,9 @@
       "Path": "Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "assets&Sequence_22",
+        "objConexion&Sequence_22",
+        "dtEntidadesPendientes&Sequence_22",
         "strTituloPaginaSECOP&Sequence_1",
         "uiNavegador&Sequence_1",
         "bExisteFormBusquedaProcesos&Sequence_1",

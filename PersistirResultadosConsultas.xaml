@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3415,7099</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3415,6703</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -91,7 +91,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Esta secuencia es encargada de asegurar el formato y columnas para insertar en la base de datos de consultas" DisplayName="PersistirResultadosConsultas" sap:VirtualizedContainerService.HintSize="3425,7034" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Esta secuencia es encargada de asegurar el formato y columnas para insertar en la base de datos de consultas" DisplayName="PersistirResultadosConsultas" sap:VirtualizedContainerService.HintSize="3425,6638" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="sqlConnection" />
     </Sequence.Variables>
@@ -111,15 +111,15 @@
       </Assign.Value>
     </Assign>
     <ui:DatabaseConnect DatabaseConnection="[sqlConnection]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="3363,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=MySQL-SECOP_PAA" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DatosConsultados]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="3363,6341" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DatosConsultados]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="3363,5945" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="rowBase" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="3329,6224" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="3329,5828" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3291,5996" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3291,5600" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="s:DateTime" Name="dateFechaPublicacion" />
                   <Variable x:TypeArguments="s:DateTime" Name="dateFechaModificacion" />
@@ -151,31 +151,9 @@
                     <OutArgument x:TypeArguments="x:String">[strEMPRESA_OK]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[rowBase("ENTIDAD").ToString.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[rowBase("ENTIDAD").ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While - Eliminar espacios en nombre de entidad" sap:VirtualizedContainerService.HintSize="3229,356" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                  <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,190" sap2010:WorkflowViewState.IdRef="Sequence_58">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_70">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[strEMPRESA_OK]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String" xml:space="preserve">[strEMPRESA_OK.Replace("  "," ")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                    </Sequence>
-                  </ui:InterruptibleDoWhile.Body>
-                  <ui:InterruptibleDoWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="strEMPRESA_OK.Contains(&quot;  &quot;)" />
-                  </ui:InterruptibleDoWhile.Condition>
-                </ui:InterruptibleDoWhile>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3229,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Empresa para consulta: &quot;+strEMPRESA_OK]" />
                 <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_UINavegador]" BrowserType="Chrome" DisplayName="Attach Browser 'Buscarpro Page'" sap:VirtualizedContainerService.HintSize="3229,5238" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="9604690702f9d3b2539b762b39602624">
                   <ui:BrowserScope.Body>
@@ -891,18 +869,10 @@
                                                     </Sequence>
                                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,1262" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DescargarArchivosPAA.xaml">
                                                       <ui:InvokeWorkflowFile.Arguments>
-                                                        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DatosConsultados">
-                                                          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtDatosConsultaFiltrados2" />
-                                                        </InArgument>
-                                                        <InArgument x:TypeArguments="ui:Browser" x:Key="in_UINavegador">
-                                                          <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="in_UINavegador" />
-                                                        </InArgument>
-                                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                                          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                                                        </InArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Entidad">
-                                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strEMPRESA_OK" />
-                                                        </InArgument>
+                                                        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DatosConsultados">[dtDatosConsultaFiltrados2]</InArgument>
+                                                        <InArgument x:TypeArguments="ui:Browser" x:Key="in_UINavegador">[in_UINavegador]</InArgument>
+                                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Entidad">[strEMPRESA_OK]</InArgument>
                                                       </ui:InvokeWorkflowFile.Arguments>
                                                     </ui:InvokeWorkflowFile>
                                                   </Parallel>

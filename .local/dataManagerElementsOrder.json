@@ -199,6 +199,10 @@
       "Path": "PersistirResultadosConsultas.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strInsert&Sequence_89",
+        "iTmpCant&Sequence_89",
+        "strInsert&Sequence_90",
+        "iTmpCant&Sequence_90",
         "dtRegsActuales&Sequence_50",
         "strConsultaRegActual&Sequence_50",
         "bExistenMasPaginas&Sequence_28",
